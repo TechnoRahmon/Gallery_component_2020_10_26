@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/stylesheets/style.css">
+    <title>UploadFiles</title>
+</head>
+<body>
+    <main>
+        <h1>Create you gallery</h1>
+        <form action="/upload" method="POST" name="form" id="form1" autocomplete="off">
+            <p id="msg">please choose a correct file!</p>
+
+           <div id="div_box">
+            <input type="file" name="file" id="file" required>
+            <label id="label1">no file has choosen</label>
+            <label for="file" class="lab">choose image</label>
+           </div> 
+            <label for="caption" >Caption</label>
+            <input type="text" name="caption" id="caption" required>
+            <input type="submit" value="upload" id="submit">
+        </form>
+        
+            <div class="parent " id="M_parent">
+                <div class="div1 M_btn" >
+                    <img src="http://localhost:3000/images/2020-ghost-of-tsushima-g2.jpg" alt="img" class="img"></div>
+
+                <div class="div2 M_btn" > <img src="http://localhost:3000/images/circle-cropped.png" alt="img" class="img"></div>
+
+                <div class="div2 M_btn" > <img src="http://localhost:3000/images/img1.jpg" alt="img" class="img"></div>
+
+                <div class="div2 M_btn" > <img src="http://localhost:3000/images/E-Head.jpg" alt="img" class="img"></div>
+               
+          </div>
+       
+    </main>
+    
+
+<script>
+    var file = document.getElementById('file')
+    file.addEventListener('change',()=>{
+        var lab = document.getElementById('label1')
+    lab.innerHTML= file.files[0].name
+    })
+
+</script>
+
+</body>
+ </html>

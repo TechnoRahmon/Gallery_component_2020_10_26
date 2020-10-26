@@ -1,0 +1,39 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  link(rel='stylesheet' href='./stylesheets/style.css')
+  title UploadFiles
+main
+  
+  h1
+    a(href='/') Create you gallery
+  form#form1(action='/upload' method='POST'  enctype='multipart/form-data' autocomplete='off')
+    - var dis = msg;
+    p#msg(style='display:'+dis) please choose a correct file!
+    #div_box
+      input#file(type='file' name='file' required='')
+      label#label1 no file has choosen
+      label.lab(for='file') choose image
+    label(for='caption') Caption
+    input#caption(type='text' name='caption' required='')
+    input#submit(type='submit' value='upload')
+    - var conDis = conDis ; 
+    p#confirm(style='display:'+conDis) your image successsfully uploaded
+  if (imgsMsg)
+    p= imgsMsg
+  #M_parent.parent
+    - var url = 'http://localhost:3000/images/'
+    if (imgs)
+      each x in imgs  
+        .div1.M_btn
+          p.caption= x.caption
+          img.img(src=url+x.path alt='img')
+
+
+script.
+  var file = document.getElementById('file')
+  file.addEventListener('change',()=>{
+  var lab = document.getElementById('label1')
+  lab.innerHTML= file.files[0].name
+  })
