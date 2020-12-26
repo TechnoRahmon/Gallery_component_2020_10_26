@@ -23,9 +23,10 @@ It is generally an online gallery that you can upload your photo and represents 
 
 "nodemon": "^2.0.6",
 
+jade": "~1.11.0"
 ```
 
-# we are using (pug engin) jade": "~1.11.0",  to view our DOM html pages 
+ we are using (pug engin) as template engine to view our DOM html pages 
 
 
 
