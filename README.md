@@ -1,9 +1,9 @@
 # Gallery_component_2020_10_26
 
-
-# It is generally an online gallery that you can upload your photo and represents it on the main page.
-
-# This project was made by Expressjs backend server. the Main modules that we are using in this project are: 
+It is generally an online gallery that you can upload your photo and represents it on the main page.
+ This project was made by Expressjs backend server. 
+ 
+ # The Main modules that we are using in this project are: 
 
 ### 
 
